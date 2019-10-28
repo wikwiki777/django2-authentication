@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, reverse
-from accounts.forms import UserLoginForm
+from accounts.forms import UserLoginForm, UserRegistrationForm
 from django.contrib.auth.decorators import login_required
 # Imports for authentication
 from django.contrib import auth, messages
@@ -49,3 +49,10 @@ def login(request):
         login_form = UserLoginForm()
 
     return render(request, 'login.html', {'login_form': login_form})
+
+
+def registration(request):
+    """Render the registration page"""
+    registration_form = UserRegistrationForm()
+    return render(request, 'registration.html',
+                  {'registration_form': registration_form})

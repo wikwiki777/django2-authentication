@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% load bulma_tags %}
 {% block page_heading %}
-User Login
+User Registration
 {% endblock %}
 {% block content %}
 <form method="POST">
     {% csrf_token %}
-    {{ login_form|bulma }}
-    <button class="button is-primary">Submit</button>
+    {{ registration_form|bulma }}
+    <button class="button is-primary">Register</button>
 </form>
 {% endblock %}
