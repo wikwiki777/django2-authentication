@@ -20,3 +20,10 @@ def logout(request):
     # Reverse allows us to pass
     # name of url io of name of view
     return redirect(reverse('index'))
+
+
+def login(request):
+    """
+    Return a login page
+    """
+    return render(request, 'login.html')
