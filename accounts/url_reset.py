@@ -10,7 +10,7 @@ urlpatterns = [
     re_path(r'^done$', PasswordResetDoneView.as_view(),
             name='password_reset_done'),
     re_path(r'^(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)$',
-            PasswordResetConfirmView.as_view(), name='password_reset_confrim'),
+            PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
     re_path(r'^complete$', PasswordResetCompleteView.as_view(),
             name='password_reset_complete')
 ]

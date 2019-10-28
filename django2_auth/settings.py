@@ -125,3 +125,6 @@ STATIC_URL = '/static/'
 # Login required decorator setting
 # https://docs.djangoproject.com/en/2.2/topics/auth/default/#the-login-required-decorator
 LOGIN_URL = '/accounts/login'
+
+# Send email to backend in console
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
