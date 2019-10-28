@@ -121,3 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Login required decorator setting
+# https://docs.djangoproject.com/en/2.2/topics/auth/default/#the-login-required-decorator
+LOGIN_URL = '/accounts/login'
