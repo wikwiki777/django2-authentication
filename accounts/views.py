@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, reverse
+from accounts.forms import UserLoginForm
 # Imports for authentication
 from django.contrib import auth, messages
+
 
 
 # Create your views here.
@@ -26,4 +28,5 @@ def login(request):
     """
     Return a login page
     """
-    return render(request, 'login.html')
+    login_form = UserLoginForm()
+    return render(request, 'login.html', {'login_form': login_form})
