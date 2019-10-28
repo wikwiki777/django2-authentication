@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
+            <a class="navbar-item" href="{% url 'index' %}">
             <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
             </a>
         
@@ -46,5 +46,22 @@
             </div>
         </div>
     </nav>
+    {% if messages %}
+    <div class="container">
+        {% for message in messages %}
+        <div class="notification has-text-centered has-background-white">
+            <strong class="has-text-info">{{ message }}</strong>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Section</h1>
+            <h2 class="subtitle">
+            A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+            </h2>
+        </div>
+    </section>       
 </body>
 </html>
